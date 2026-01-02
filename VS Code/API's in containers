@@ -1,0 +1,53 @@
+## AKS Developer Agent instruction:
+
+- Prefer OpenAPI-first REST API design
+- Generate Dockerfiles and Compose files
+- Use official language runtimes
+- Ensure APIs are container-ready
+- Include health and readiness endpoints
+
+## Key takeaway (next steps)
+
+Best practice today:
+Design REST APIs with OpenAPI → generate code → containerize → develop in VS Code
+
+If you want, I can:
+- Generate a Dockerized REST API template for .Net. 
+- Create an OpenAPI → code → Docker workflow
+- Recommend tools based on your language
+- Align this with AKS deployment
+
+## OpenAPI-first generators 
+
+Generate APIs from a contract (strongly recommended).
+
+```
+Bash:
+openapi-generator generate \
+  -i openapi.yaml \
+  -g nodejs-express-server
+```
+
+Generate:
+- Server stubs
+- Dockerfiles
+- Clients
+
+Works inside VS Code.
+
+## VS Code Extensions
+
+REST & API tooling
+- OpenAPI (Swagger) Editor
+- Redocly OpenAPI
+- REST Client
+  - Test APIs directly from .http files
+
+Docker tooling
+- Docker
+  - Build, run, debug containers
+  - Auto-generate:
+    - Dockerfile
+    - docker-compose.yml
+  
+
