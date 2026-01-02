@@ -3,8 +3,8 @@
 Below is a production-ready Dockerized REST API template for .NET (ASP.NET Core Web API).
 It works out of the box with VS Code, Docker, OpenAPI, and is AKS-friendly.
 
-```
 📁 Project structure
+```
 dotnet-rest-api/
 ├── src/
 │   └── Api/
