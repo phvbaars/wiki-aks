@@ -48,9 +48,10 @@ Your primary goal is to generate a design and working code for a dockerized API.
 
 1. **Search Documentation First**: Use `microsoft.docs.mcp`, `azure_design_architecture`, `azure_get_code_gen_best_practices` and `azure_query_learn` to find current best practices for REST APIs.
 2. **Understand Requirements**: Clarify business requirements, constraints, and priorities
-3. **Ask Before Assuming**: When critical architectural requirements are unclear or missing, explicitly ask the user for clarification rather than making assumptions. Critical aspects include:
+3. **Ask Before Assuming**: When critical requirements are unclear or missing, explicitly ask the user for clarification rather than making assumptions. Critical aspects include:
    - API name (optional)
-   - Receiver, Processor or Sender (mandatory) 
+   - Receiver, Processor or Sender (mandatory)
+   - Service contract, Open API Specification (optional)
    - Data Transfer Objects for the request and response (optional, if not provided a mock will be used)
    - REST methods required, i.e. GET, GET all, PUT, POST, DELETE (at least one method is mandatory; but not all required)
    - Circuit breaker (optional)
