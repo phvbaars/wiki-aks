@@ -22,13 +22,11 @@ When an ingress controller doesn't add value:
 
 ### API Management
 
-API Management  zou policies toevoegen, bijvoorbeeld voor throttling, xml->json transformatie en security (OAuth2). We kunnen APIM ook gebruiken voor het Application Gateway integratie patroon. Die functionaliteit is wel nodig voor het integratie platform, maar niet voor de container platforms. Het zou een dure oplossing zijn met weinig toegevoegde waarde.
+De vraag is of we API Management nodig hebben naast Application Gateway. API Management  zou policies toevoegen, bijvoorbeeld voor throttling, xml->json transformatie en security (OAuth2). We kunnen APIM ook gebruiken voor het Application Gateway integratie patroon. Die functionaliteit is wel nodig voor het integratie platform, maar niet voor de container platforms. Het zou een dure oplossing zijn met weinig toegevoegde waarde.
 
-Belangrijkste implicatie. App Gateway doet geen OAuth2 validatie. Die validatie wordt gedaan door de container. Wat App Gateway wel doet is: 
- 
-❌ Blokkeer requests zonder Authorization header
-❌ Blokkeer als header niet begint met Bearer
-✅ Forward header 1-op-1 naar backend
+Belangrijkste implicatie. App Gateway doet geen OAuth2 validatie voor machine-to-machine koppelingen. In dat geval kan App Gateway de authorization header alleen doorgeven (pass-through). De validatie kan dan op container niveau worden gedaan. App Gateway kan wel worden gebruikt in een user scenario. App Gateway controleert dan op de aanwezigheid van een OAuth2 token. Als dat niet geval is, vindt er een redirect plaats naar de identity provider. In een machine-to-machine scenario is dat niet mogelijk. 
+
+Als we een andere ingress controller gebruiken dan Application Gateway, dan is gebruik van API Management helemaal vreemd. We zouden de ingress controller (in het container cluster) dan pas aanroepen na API Management. API Management staat namelijk buiten het container cluster. Dat is een onlogische architectuur.  
 
 ### FrontDoor
 
