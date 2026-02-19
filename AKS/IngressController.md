@@ -4,13 +4,13 @@ There are two alternatives. When hosting your AKS cluster on the public cloud, y
 
 ### Functionality of ingress controller
 
-- One public IP
+- One public IP. 
   Without ingress, every service of type LoadBalancer gets its own public IP. Costs go up. Managing DNS becomes messy.
   With ingress, you expose one public ip. Route traffic to many services via host/path rules. Cleaner DNS.
-- TLS termination in one place
+- TLS termination in one place. 
   Without ingress, you have to manage TLS per service. 
   With ingress, you centralize certificates and certificate renewal.
-- Clean routing for multiple workloads
+- Clean routing for multiple workloads. 
   Ingress controllers give you path-based routing, host-based routing, canary releases (testing in production, small % of traffic), blue/green (blue=current, green=new, zero-downtime deployments and a safe rollback path), rate limiting and WAF (when using AGIC/NGINX add-ons).
 
 Note: ingress controllers work both with a VNet and without a VNet.
