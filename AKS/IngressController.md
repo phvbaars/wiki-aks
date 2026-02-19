@@ -11,7 +11,7 @@ There are two alternatives. When hosting your AKS cluster on the public cloud, y
   Without ingress, you have to manage TLS per service. 
   With ingress, you centralize certificates and certificate renewal.
 - Clean routing for multiple workloads. 
-  Ingress controllers give you path-based routing, host-based routing, canary releases (testing in production, small % of traffic), blue/green (blue=current, green=new, zero-downtime deployments and a safe rollback path), rate limiting and WAF (when using App Gateway Ingress Controller(=AGIc)/NGINX add-ons).
+  Ingress controllers give you path-based routing, host-based routing (based on the hostname in the request), canary releases (testing in production, small % of traffic), blue/green (blue=current, green=new, zero-downtime deployments and a safe rollback path), rate limiting and WAF (when using App Gateway Ingress Controller(=AGIc)/NGINX add-ons).
 
 Note: ingress controllers work both with a VNet and without a VNet.
 
