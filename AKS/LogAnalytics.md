@@ -1,7 +1,7 @@
 ## Log Analytics
 
 ### Flow
-
+```
 Pod stdout/stderr
      ↓
 Container runtime (containerd)
@@ -13,7 +13,7 @@ Data Collection Rule (DCR)
 ConnectLog Analytics Workspace
      ↓
 Tables: ContainerLogV2, KubePodInventory, KubeNodeInventory, etc
-
+```
 
 ### Setup
 
