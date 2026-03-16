@@ -24,6 +24,7 @@ If you want to prove AKS mastery:
 - [Develop and deploy AKS applications](https://learn.microsoft.com/en-us/training/paths/develop-deploy-applications-kubernetes/)
 
 ✔️ Optionally add CNCF certifications:
+- Kubernetes and Cloud Native Associate (KCNA)
 - CKA (Kubernetes Administrator)  
 - CKAD (Kubernetes Application Developer)  
 
