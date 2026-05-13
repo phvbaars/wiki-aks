@@ -14,5 +14,8 @@ Kies Istio wanneer:
 - Je zero-trust networking wilt afdwingen
 - Je observability op de netwerklaag nodig hebt
 
-Je cluster werkt prima zonder Istio, maar je verliest een aantal krachtige mesh features.
+Je cluster werkt prima zonder Istio, maar je security is minder fijnmazig.
+- Geen automatische mTLS versleuteling
+- Je valt terug op Kubernetes network policies
+- Geen identity-based security (SPIFFE/SPIRE)
 
